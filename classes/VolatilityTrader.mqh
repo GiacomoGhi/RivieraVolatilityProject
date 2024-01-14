@@ -171,8 +171,8 @@ void VolatilityTrader::onTick(){
 }
 
 bool VolatilityTrader::rsiIsOk(int direction){
-   int OVER_BOUGHT = 65;
-   int OVER_SOLD = 35;
+   int OVER_BOUGHT = this.overBoughtTh;
+   int OVER_SOLD = this.overSoldTh;
    double rsiValue[1];
    CopyBuffer(this.rsiHandle, 0, 0, 1, rsiValue);
    double value = rsiValue[0];
